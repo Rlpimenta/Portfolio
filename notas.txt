@@ -1,0 +1,7 @@
+Decidi desenvolver um portfólio pessoal para apresentar a minha experiência
+profissional, formação, competências e projetos na área tecnológica.
+Optei por uma estrutura responsiva utilizando Flexbox e uma paleta de cores
+com inspiração tecnológica e industrial. Durante o desenvolvimento tive
+dificuldades na organização do layout e na adaptação a diferentes tamanhos
+de ecrã. Para resolver estes problemas, utilizei Flexbox para organizar os
+elementos e media queries para adaptar o layout aos diferentes dispositivos.

@@ -1,0 +1,512 @@
+:root {
+
+    /* CORES */
+    --principal: #0F172A;
+    --fundo: #111827;
+    --azul: #3B82F6;
+    --destaque: #F59E0B;
+    --verde: #22C55E;
+    --texto: #E2E8F0;
+    --texto-fraco: #94A3B8;
+    --branco: #FFFFFF;
+    --linha: #334155;
+
+    /* FONTES */
+    --fonte-texto: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    --fonte-titulo: "Montserrat", "Segoe UI", Roboto, Arial, sans-serif;
+
+    /* LAYOUT */
+    --largura-maxima: 62rem;
+    --espaco: 1.5rem;
+    --raio: 6px;
+}
+
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   BASE
+   ========================= */
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+
+    font-family: var(--fonte-texto);
+    font-size: 1.0625rem;
+    line-height: 1.5;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+}
+
+
+main {
+    flex: 1;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: var(--espaco);
+
+    padding: 1rem 2rem;
+
+    background-color: rgba(15, 23, 42, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.menu a {
+    color: var(--branco);
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.menu a:hover {
+    color: var(--azul);
+
+    transform: translateY(-2px);
+}
+
+
+/* Nome */
+
+.logo {
+    margin-right: 2.5rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* Links do menu */
+
+.links {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    list-style: none;
+}
+
+
+/* CV, GitHub e LinkedIn */
+
+.acoes {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    list-style: none;
+
+    margin-left: auto;
+}
+
+
+.acoes img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+
+    gap: 3rem;
+
+    max-width: var(--largura-maxima);
+
+    margin: 0 auto;
+
+    padding: 4rem 2rem;
+
+    background-color: var(--principal);
+}
+
+
+.hero-image {
+    width: 35%;
+
+    overflow: hidden;
+
+    border-radius: var(--raio);
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.hero-text {
+    width: 65%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 3rem;
+}
+
+
+.hero-text h1 {
+    color: var(--branco);
+
+    font-size: 3rem;
+
+    margin-bottom: 1rem;
+
+    white-space: nowrap;
+}
+
+
+.hero-text p {
+    color: var(--azul);
+
+    font-size: 1.2rem;
+}
+
+
+/* =========================
+   SECÇÕES
+   ========================= */
+
+main > section:not(.hero) {
+    max-width: var(--largura-maxima);
+
+    margin: 0 auto;
+
+    padding: 4rem 2rem;
+}
+
+
+main > section h2 {
+    color: var(--branco);
+
+    margin-bottom: 2rem;
+}
+
+
+/* =========================
+   ARTIGOS
+   ========================= */
+
+main > section article {
+    margin-bottom: 2rem;
+
+    padding: 1.5rem;
+
+    background-color: var(--principal);
+
+    border: 1px solid var(--linha);
+
+    border-radius: var(--raio);
+}
+
+
+main > section article h3 {
+    color: var(--branco);
+
+    margin-bottom: 0.5rem;
+}
+
+
+main > section article p {
+    color: var(--texto-fraco);
+}
+
+
+/* Listas */
+
+main > section ul {
+    margin-top: 1rem;
+
+    padding-left: 1.5rem;
+}
+
+
+main > section li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* =========================
+   COMPETÊNCIAS
+   ========================= */
+
+#competencias {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: var(--espaco);
+}
+
+
+#competencias h2 {
+    width: 100%;
+}
+
+
+.competencia-card {
+    flex: 1;
+
+    margin-bottom: 0;
+}
+
+
+.competencia-card h3 {
+    color: var(--branco);
+
+    margin-bottom: 1rem;
+}
+
+
+.competencia-card ul {
+    margin-top: 0;
+}
+
+
+/* =========================
+   LINHAS DIVISÓRIAS
+   ========================= */
+
+hr {
+    border: 0;
+
+    border-top: 1px solid var(--linha);
+
+    margin: 0;
+}
+
+
+/* =========================
+   PROJETOS
+   ========================= */
+
+.projetos-grid {
+    display: flex;
+
+    gap: var(--espaco);
+}
+
+
+.projeto-card {
+    flex: 1;
+
+    background-color: var(--principal);
+
+    padding: var(--espaco);
+
+    border: 1px solid var(--linha);
+
+    border-radius: var(--raio);
+}
+
+
+.projeto-card img {
+    width: 100%;
+    height: 120px;
+
+    object-fit: cover;
+
+    margin-bottom: 1rem;
+}
+
+
+.projeto-card h3 {
+    color: var(--branco);
+
+    margin-bottom: 0.75rem;
+}
+
+
+.projeto-card p {
+    color: var(--texto-fraco);
+
+    margin-bottom: 1rem;
+}
+
+
+.projeto-card a {
+    color: var(--azul);
+
+    text-decoration: none;
+}
+
+
+.projeto-card a:hover {
+    color: var(--destaque);
+}
+
+
+/* =========================
+   CONTACTOS
+   ========================= */
+
+#contactos a {
+    color: var(--azul);
+
+    text-decoration: none;
+}
+
+
+#contactos a:hover {
+    color: var(--destaque);
+}
+
+
+/* =========================
+   RODAPÉ
+   ========================= */
+
+footer {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 0.8rem 1rem;
+
+    background-color: var(--fundo);
+
+    color: var(--texto-fraco);
+
+    border-top: 1px solid var(--linha);
+
+    font-size: 0.85rem;
+}
+
+
+footer a {
+    color: var(--texto);
+
+    text-decoration: none;
+}
+
+
+footer a:hover {
+    color: var(--destaque);
+}
+
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .menu {
+        flex-wrap: wrap;
+
+        padding: 1rem;
+    }
+
+
+    .logo {
+        width: 100%;
+
+        margin-right: 0;
+    }
+
+
+    .links {
+        flex-wrap: wrap;
+
+        gap: 1rem;
+    }
+
+
+    .acoes {
+        margin-left: 0;
+    }
+
+
+    .hero {
+        flex-direction: column;
+
+        gap: 2rem;
+
+        padding: 2rem 1rem;
+    }
+
+
+    .hero-image {
+        width: 100%;
+    }
+
+
+    .hero-text {
+        width: 100%;
+
+        padding: 1rem;
+    }
+
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+
+    #competencias {
+        flex-direction: column;
+    }
+
+
+    .competencia-card {
+        width: 100%;
+    }
+
+
+    .projetos-grid {
+        flex-direction: column;
+    }
+
+}

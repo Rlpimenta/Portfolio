@@ -1,0 +1,422 @@
+:root {
+
+    /* CORES */
+    --principal: #0F172A;      /* fundo escuro principal */
+    --fundo: #111827;          /* fundo das páginas */
+    --azul: #3B82F6;           /* links e elementos tecnológicos */
+    --destaque: #F59E0B;       /* destaques e detalhes */
+    --verde: #22C55E;          /* automação e IoT */
+    --texto: #E2E8F0;          /* texto principal */
+    --texto-fraco: #94A3B8;    /* texto secundário */
+    --branco: #FFFFFF;         /* texto de destaque */
+    --linha: #334155;          /* bordas e separadores */
+
+    /* FONTES */
+    --fonte-texto: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    --fonte-titulo: "Montserrat", "Segoe UI", Roboto, Arial, sans-serif;
+
+    /* LAYOUT */
+    --largura-maxima: 62rem;
+    --espaco: 1.5rem;
+    --raio: 6px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+
+    font-family: var(--fonte-texto);
+    font-size: 1.0625rem;
+    line-height: 1.5;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+
+.topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 0.5rem 1rem;
+
+    background-color: var(--fundo);
+    color: var(--texto-fraco);
+
+    border-bottom: 1px solid var(--linha);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   PÁGINA INICIAL
+   ========================= */
+
+.entrada {
+    width: 100%;
+
+    flex: 1;
+
+    display: flex;
+}
+
+
+.entrada-image {
+    width: 40%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.entrada-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.entrada-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent 82%,
+            var(--principal) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            var(--principal) 0%,
+            transparent 8%,
+            transparent 92%,
+            var(--principal) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+.entrada-content {
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: var(--principal);
+
+    padding: 2rem;
+}
+
+
+.entrada-content h1 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 3rem;
+
+    color: var(--branco);
+
+    margin-bottom: 0.75rem;
+}
+
+
+.entrada-content h1 a {
+    color: var(--branco);
+
+    text-decoration: none;
+}
+
+
+.entrada-content h1 a:hover {
+    color: var(--destaque);
+}
+
+
+/* =========================
+   SUBTÍTULO
+   ========================= */
+
+.subtitulo {
+    font-size: 1.2rem;
+
+    color: var(--azul);
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================
+   TEXTO DE CONVITE
+   ========================= */
+
+.convite {
+    max-width: 38rem;
+
+    color: var(--texto-fraco);
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================
+   BOTÃO PRINCIPAL
+   ========================= */
+
+.botao {
+    display: inline-block;
+
+    padding: 0.75rem 1.5rem;
+
+    background-color: var(--destaque);
+
+    color: var(--principal);
+
+    text-decoration: none;
+
+    border-radius: var(--raio);
+
+    font-weight: 700;
+
+    margin-bottom: 2rem;
+}
+
+
+.botao:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   ATALHOS
+   ========================= */
+
+.atalhos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1rem;
+
+    width: 100%;
+
+    max-width: 38rem;
+
+    margin-bottom: 2rem;
+}
+
+
+.atalhos a {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    padding: 0.8rem;
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    border: 1px solid var(--linha);
+
+    border-radius: var(--raio);
+
+    background-color: rgba(255, 255, 255, 0.05);
+
+    transition: 0.2s ease;
+}
+
+
+.atalhos span {
+    font-size: 1.5rem;
+}
+
+
+.atalhos a:hover {
+    border-color: var(--destaque);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   LINKS PESSOAIS
+   ========================= */
+
+.acoes {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+}
+
+
+.acoes a {
+    color: var(--texto-fraco);
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    transition: color 0.2s ease;
+}
+
+
+.acoes a:hover {
+    color: var(--destaque);
+}
+
+
+/* =========================
+   CONTACTOS
+   ========================= */
+
+.contactos {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.8rem;
+
+    margin-top: 1rem;
+
+    color: var(--texto-fraco);
+
+    font-size: 0.85rem;
+
+    text-align: center;
+}
+
+
+.contactos a {
+    color: var(--texto-fraco);
+
+    text-decoration: none;
+}
+
+
+.contactos a:hover {
+    color: var(--destaque);
+}
+
+
+/* =========================
+   RODAPÉ
+   ========================= */
+
+footer {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 0.8rem 1rem;
+
+    background-color: var(--fundo);
+
+    color: var(--texto-fraco);
+
+    border-top: 1px solid var(--linha);
+
+    font-size: 0.85rem;
+}
+
+
+footer a {
+    color: var(--texto);
+
+    text-decoration: none;
+}
+
+
+footer a:hover {
+    color: var(--destaque);
+}
+
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .entrada {
+        flex-direction: column;
+    }
+
+
+    .entrada-image {
+        width: 100%;
+        height: 45vh;
+    }
+
+
+    .entrada-content {
+        width: 100%;
+
+        padding: 2rem 1rem;
+    }
+
+
+    .entrada-content h1 {
+        font-size: 2.2rem;
+    }
+
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+
+    .atalhos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .contactos {
+        flex-direction: column;
+
+        gap: 0.4rem;
+    }
+
+}

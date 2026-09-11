@@ -1,0 +1,34 @@
+
+
+CRÉDITOS
+
+Autor:
+Roziel Lima Pimenta
+
+Projeto desenvolvido no âmbito da formação de Web Design — IEFP.
+
+Tecnologias utilizadas:
+HTML5
+CSS3
+JavaScript
+
+Fontes:
+Google Fonts — Inter e Montserrat.
+
+Imagens:
+Fotografia pessoal de Roziel Lima Pimenta.
+Imagens utilizadas no projeto para fins educativos.
+
+Finalidade:
+Projeto desenvolvido para fins educativos e de apresentação profissional.
+
+-----------------
+
+IMAGENS EXTERNAS
+
+Imagem utilizada no projeto Mini CNC:
+Autor: Snapmaker 3D Printer
+Perfil: https://unsplash.com/pt-br/@snapmaker_official
+Origem: Unsplash
+Data de acesso: 11/09/2026
+Licença: Unsplash License

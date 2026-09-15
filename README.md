@@ -1,5 +1,7 @@
 # Portfólio — Roziel Lima Pimenta
 
+🌐 [Ver Portfólio](https://rlpimenta.github.io/Portfolio/)
+
 Portfólio pessoal desenvolvido durante a formação de Web Design no IEFP.
 
 ## Sobre o projeto

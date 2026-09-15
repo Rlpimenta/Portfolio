@@ -1,0 +1,334 @@
+/* =====================================================================
+   Clube de Trilhos e Caminhadas — folha de estilos
+   UC00622 — Desenvolvimento de aplicações HTML5
+   ---------------------------------------------------------------------
+   Uma única folha de estilos partilhada pelas três páginas.
+   Alterar uma cor aqui altera o site inteiro: é esta a vantagem
+   de separar a estrutura (HTML) da apresentação (CSS).
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   1. VARIÁVEIS DE COR E MEDIDA
+   Definidas em :root para ficarem disponíveis em todo o documento.
+   Usam-se depois com var(--nome).
+   --------------------------------------------------------------------- */
+:root {
+    --cor-mata:      #2f5d50;   /* verde escuro — cabeçalho e títulos */
+    --cor-mata-fundo:#254a41;   /* variação mais escura, para o rodapé */
+    --cor-marca:     #c4462f;   /* vermelho das marcas de percurso GR  */
+    --cor-tinta:     #23302b;   /* texto corrente                      */
+    --cor-tinta-fraca:#5c6b64;  /* texto secundário                    */
+    --cor-papel:     #f4f6f3;   /* fundo da página                     */
+    --cor-branco:    #ffffff;
+    --cor-pedra:     #d5ddd6;   /* linhas e contornos                  */
+
+    --largura-maxima: 62rem;    /* largura útil do conteúdo            */
+    --espaco:         1.5rem;   /* espaçamento base                    */
+    --raio:           4px;      /* arredondamento dos cantos           */
+}
+
+
+/* ---------------------------------------------------------------------
+   2. REPOSIÇÃO E BASE
+   Os navegadores aplicam margens próprias. Repomo-las para partir
+   de um ponto previsível.
+   --------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;   /* a largura passa a incluir padding e borda */
+}
+
+body {
+    margin: 0;
+    background-color: var(--cor-papel);
+    color: var(--cor-tinta);
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+}
+
+img,
+video {
+    max-width: 100%;   /* nunca ultrapassam o contentor */
+    height: auto;      /* mantêm a proporção original   */
+    display: block;
+}
+
+
+/* ---------------------------------------------------------------------
+   3. TIPOGRAFIA
+   Serifada nos títulos, não serifada no texto corrente: dois estilos
+   claramente distintos, sem depender de tipos de letra externos.
+   --------------------------------------------------------------------- */
+h1, h2, h3, legend {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--cor-mata);
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.1rem;
+    margin: 0 0 0.3rem 0;
+    color: var(--cor-branco);   /* o h1 está sobre o fundo verde */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+/* Marca de percurso pintada antes de cada h2.
+   Duas faixas — vermelha sobre branca — como as marcas dos trilhos GR. */
+h2::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 9px;
+    margin-bottom: 0.6rem;
+    border: 1px solid var(--cor-pedra);
+    background-image: linear-gradient(
+        to bottom,
+        var(--cor-marca) 50%,
+        var(--cor-branco) 50%
+    );
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--espaco);
+    max-width: 62ch;   /* linhas curtas leem-se melhor */
+}
+
+
+/* ---------------------------------------------------------------------
+   4. LIGAÇÕES
+   --------------------------------------------------------------------- */
+a {
+    color: var(--cor-mata);
+    text-decoration-color: var(--cor-marca);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--cor-marca);
+}
+
+/* Contorno bem visível para quem navega com o teclado (tecla Tab).
+   Nunca remover o foco sem o substituir por outro igualmente claro. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-marca);
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------------------------------------------
+   5. CABEÇALHO E MENU DE NAVEGAÇÃO
+   --------------------------------------------------------------------- */
+header {
+    background-color: var(--cor-mata);
+    color: var(--cor-branco);
+    padding: 2.5rem var(--espaco) 0 var(--espaco);
+}
+
+/* O parágrafo de subtítulo dentro do cabeçalho */
+header > p {
+    margin: 0;
+    color: #cfe0d8;
+    font-size: 1.05rem;
+}
+
+header h1,
+header > p,
+header nav {
+    max-width: var(--largura-maxima);
+    margin-left: auto;
+    margin-right: auto;   /* alinham com o conteúdo do <main> */
+}
+
+nav ul {
+    list-style: none;        /* retira os pontos da lista */
+    margin: 1.75rem 0 0 0;
+    padding: 0;
+    display: flex;           /* coloca os itens lado a lado */
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.7rem 1.1rem;
+    color: var(--cor-branco);
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+}
+
+nav a:hover {
+    color: var(--cor-branco);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: var(--cor-marca);
+}
+
+
+/* ---------------------------------------------------------------------
+   6. CONTEÚDO PRINCIPAL
+   --------------------------------------------------------------------- */
+main {
+    max-width: var(--largura-maxima);
+    margin: 2.5rem auto;
+    padding: 0 var(--espaco);
+}
+
+section {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-pedra);
+    border-radius: var(--raio);
+    padding: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+section img,
+section video {
+    border-radius: var(--raio);
+    margin-bottom: 1.25rem;
+}
+
+audio {
+    width: 100%;
+    max-width: 32rem;
+}
+
+
+/* ---------------------------------------------------------------------
+   7. FIGURAS E LEGENDAS (página Percursos)
+   --------------------------------------------------------------------- */
+figure {
+    margin: 0 0 1.75rem 0;
+    max-width: 600px;   /* a mesma largura das imagens */
+}
+
+figure img {
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: var(--raio) var(--raio) 0 0;
+}
+
+figcaption {
+    background-color: var(--cor-papel);
+    border: 1px solid var(--cor-pedra);
+    border-top: none;
+    border-radius: 0 0 var(--raio) var(--raio);
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: var(--cor-tinta-fraca);
+}
+
+
+/* ---------------------------------------------------------------------
+   8. FORMULÁRIO DE INSCRIÇÃO
+   --------------------------------------------------------------------- */
+form {
+    background-color: var(--cor-branco);
+    border: 1px solid var(--cor-pedra);
+    border-radius: var(--raio);
+    padding: 1.75rem;
+}
+
+fieldset {
+    border: none;
+    border-top: 1px solid var(--cor-pedra);
+    padding: 1.25rem 0 0.5rem 0;
+    margin: 0 0 1.5rem 0;
+}
+
+fieldset:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+legend {
+    font-size: 1.15rem;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    max-width: 30rem;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--cor-pedra);
+    border-radius: var(--raio);
+    background-color: var(--cor-papel);
+    font-family: inherit;   /* herda o tipo de letra do body */
+    font-size: 1rem;
+    color: var(--cor-tinta);
+}
+
+textarea {
+    max-width: 40rem;
+    resize: vertical;   /* só se pode esticar na vertical */
+}
+
+/* Botões de opção e caixas de verificação ficam ao lado do texto */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+    font-weight: 400;
+}
+
+/* Assinala visualmente o campo que o utilizador está a preencher */
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: var(--cor-branco);
+    border-color: var(--cor-mata);
+}
+
+/* Assinala a vermelho apenas os campos que o utilizador já preencheu
+   mal — :user-invalid não reage a campos ainda por tocar. */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: var(--cor-marca);
+}
+
+button {
+    background-color: var(--cor-mata);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: var(--raio);
+    padding: 0.85rem 1.8rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-marca);
+}

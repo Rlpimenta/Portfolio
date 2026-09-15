@@ -1,0 +1,202 @@
+/*
+Projeto: Doce Ribeira
+Autor: Roziel Pimenta
+
+Paleta de cores:
+Castanho-chocolate: #5D4037
+Creme: #FFF8F0
+Caramelo: #D9821B
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* MOBILE FIRST */
+
+header { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+} 
+
+nav ul { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+body {
+    background-color: #FFF8F0;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    color: #5D4037;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D9821B;
+}
+
+.destaque {
+    background-color: #D9821B;
+    color: white;
+    padding: 15px;
+}
+
+#especialidades {
+    background-color: #F3E8DC;
+    padding: 20px;
+}
+#especialidades h2 { margin-bottom: 20px;}
+
+.cartoes {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.cartoes article {
+    flex: 1 1 280px;
+}
+
+footer {
+    background-color: #5D4037;
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    color: #D9821B;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFF8F0;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* CARTÕES DAS ESPECIALIDADES */
+
+article {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #D8C8BC;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+
+/*
+:first-of-type seleciona o primeiro elemento <p>
+dentro de cada article.
+*/
+
+article p:first-of-type {
+    font-style: italic;
+}
+
+
+/* TABELA DE PREÇOS */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #D8C8BC;
+    text-align: left;
+}
+
+th {
+    background-color: #5D4037;
+    color: white;
+}
+
+/* produtos */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.galeria figure {
+    flex: 1 1 280px;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+}
+/* IMAGENS RESPONSIVAS */
+img { 
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 768px) { 
+
+    header { 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .cartoes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cartoes article {
+        flex: 1 1 280px;
+    }
+
+}
+
+/* ECRÃS GRANDES */
+
+@media (min-width: 1200px) {
+
+    main {
+        max-width: 1200px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+}

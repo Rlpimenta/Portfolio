@@ -32,3 +32,16 @@ Perfil: https://unsplash.com/pt-br/@snapmaker_official
 Origem: Unsplash
 Data de acesso: 11/09/2026
 Licença: Unsplash License
+
+------------------------
+
+Imagens:
+Fotografia pessoal de Roziel Lima Pimenta.
+
+Imagem Mini CNC:
+Imagem gerada por inteligência artificial (ChatGPT),
+a partir de fotografia de referência fornecida pelo autor,
+para utilização no portfólio pessoal e fins educativos.
+
+Finalidade:
+Projeto desenvolvido para fins educativos e de apresentação profissional.

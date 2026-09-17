@@ -278,28 +278,62 @@ main {
 
 .acoes {
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 1.5rem;
 }
 
 
 .acoes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: var(--texto-fraco);
-
     text-decoration: none;
-
     font-size: 0.95rem;
-
     transition: color 0.2s ease;
 }
-
 
 .acoes a:hover {
     color: var(--destaque);
 }
+
+/* Ícones */
+
+.acoes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.acoes a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Efeito ao passar o rato */
+
+.acoes a:hover {
+    color: var(--destaque);
+    transform: translateY(-3px);
+}
+
+.acoes a:hover .texto-link {
+    opacity: 0;
+}
+
+.acoes a:hover img {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
 
 
 /* =========================

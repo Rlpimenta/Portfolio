@@ -1,0 +1,10 @@
+ALTERAÇÕES DO PROJETO
+
+01/10/2026
+
+- Adicionada interação nos atalhos da página inicial.
+- Mensagens aparecem ao passar o mouse e desaparecem ao sair.
+- Adicionado efeito de transição nas mensagens.
+- Adicionado aviso "🚧 Novas funcionalidades a caminho."
+- Aviso desaparece automaticamente após 5 segundos.
+- Adicionado efeito de fade-out no aviso.

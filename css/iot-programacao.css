@@ -1,0 +1,121 @@
+
+.iot-page {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+}
+
+.iot-hero {
+    width: 100%;
+    max-width: 760px;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--principal);
+    border: 1px solid var(--linha);
+    border-radius: 12px;
+}
+
+.iot-label {
+    display: inline-block;
+    color: var(--azul);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.iot-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--azul);
+    font-size: 2.5rem;
+}
+
+.iot-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1.2rem;
+    color: var(--branco);
+}
+
+.iot-description,
+.iot-message {
+    color: var(--texto-fraco);
+    line-height: 1.8;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.iot-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 2.5rem 0 1rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--destaque);
+    border-radius: 30px;
+    color: var(--destaque);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--destaque);
+    animation: pulse 1.5s infinite;
+}
+
+.iot-hero h2 {
+    color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.iot-back {
+    display: inline-block;
+    margin-top: 2.5rem;
+    color: var(--azul);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.iot-back:hover {
+    color: var(--destaque);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.35;
+    }
+}
+
+@media (max-width: 600px) {
+    .iot-page {
+        padding: 2rem 1rem;
+    }
+
+    .iot-hero {
+        padding: 3rem 1.2rem;
+    }
+
+    .iot-description,
+    .iot-message {
+        font-size: 0.95rem;
+    }
+}

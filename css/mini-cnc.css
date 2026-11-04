@@ -1,4 +1,781 @@
 
+/* ==============================
+   1. VARIÁVEIS
+============================== */
+
+:root {
+
+    /* CORES */
+    --principal: #0B1424;
+    --fundo: #070D18;
+    --azul: #55A6D9;
+    --destaque: #E7B85D;
+    --verde: #85C8B4;
+    --texto: #E2E8F0;
+    --texto-fraco: #94A3B8;
+    --branco: #FFFFFF;
+    --linha: #26364B;
+
+    /* FONTES */
+    --fonte-texto: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+    --fonte-titulo: "Space Grotesk", "Segoe UI", Roboto, Arial, sans-serif;
+
+    /* LAYOUT */
+    --largura-maxima: 80rem;
+    --espaco: 1.5rem;
+    --raio: 6px;
+}
+
+
+/* ==============================
+   2. RESET
+============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ==============================
+   3. BASE
+============================== */
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    background-color: var(--fundo);
+    color: var(--texto);
+
+    font-family: var(--fonte-texto);
+    font-size: 1.0625rem;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+}
+
+main {
+    flex: 1;
+}
+
+
+/* ==============================
+   4. MENU
+============================== */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco);
+
+    padding: 1rem 2rem;
+
+    background-color: rgba(15, 23, 42, 0.05);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.menu a {
+    color: var(--branco);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--azul);
+    transform: translateY(-2px);
+}
+
+.logo {
+    margin-right: 2.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    list-style: none;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-left: auto;
+
+    list-style: none;
+}
+
+.acoes img {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* ==============================
+   5. HERO
+============================== */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+
+    background-color: var(--principal);
+}
+
+.hero-image {
+    width: 35%;
+    overflow: hidden;
+    border-radius: var(--raio);
+}
+
+.hero-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 65%;
+    padding: 3rem;
+}
+
+.hero-text h1 {
+    margin-bottom: 1rem;
+
+    color: var(--branco);
+    font-size: 3rem;
+    white-space: nowrap;
+}
+
+.hero-text p {
+    color: var(--azul);
+    font-size: 1.2rem;
+}
+
+
+/* ==============================
+   6. SECÇÕES
+============================== */
+
+main > section {
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+main > section h2 {
+    margin-bottom: 2rem;
+    color: var(--branco);
+}
+
+
+/* ==============================
+   7. ARTIGOS
+============================== */
+
+main > section article {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+
+    background-color: var(--principal);
+    border: 1px solid var(--linha);
+    border-radius: var(--raio);
+}
+
+main > section article h3 {
+    margin-bottom: 0.5rem;
+    color: var(--branco);
+}
+
+main > section article p {
+    color: var(--texto-fraco);
+}
+
+
+/* Listas */
+
+main > section ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+main > section li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* ==============================
+   8. COMPETÊNCIAS
+============================== */
+
+#competencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco);
+}
+
+#competencias h2 {
+    width: 100%;
+}
+
+.competencia-card {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.competencia-card h3 {
+    margin-bottom: 1rem;
+    color: var(--branco);
+}
+
+.competencia-card ul {
+    margin-top: 0;
+}
+
+
+/* ==============================
+   9. PROJETOS
+============================== */
+
+/* Cabeçalho */
+
+.projetos-header {
+    margin-bottom: 1.5rem;
+}
+
+.projetos-header h2 {
+    margin-bottom: 0;
+}
+
+
+/* Estrutura */
+
+.projetos-carrossel {
+    position: relative;
+    min-width: 0;
+}
+
+.projetos-container {
+    min-width: 0;
+}
+
+
+/* Grelha normal */
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: var(--espaco);
+}
+
+
+/* Cartões */
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    margin-bottom: 0;
+    padding: 1.25rem;
+
+    background-color: var(--principal);
+    border: 1px solid var(--linha);
+    border-radius: var(--raio);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--azul);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Imagens */
+
+.projeto-card img {
+    display: block;
+
+    width: 100%;
+    height: 160px;
+
+    margin-bottom: 1rem;
+
+    object-fit: contain;
+}
+
+
+/* Títulos e descrições */
+
+.projeto-card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--branco);
+}
+
+.projeto-card p {
+    flex-grow: 1;
+
+    margin-bottom: 1rem;
+    color: var(--texto-fraco);
+}
+
+
+/* Links */
+
+.projeto-card a {
+    color: var(--azul);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.projeto-card a:hover {
+    color: var(--destaque);
+}
+
+
+/* Botões de navegação */
+
+.projeto-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--linha);
+    border-radius: 50%;
+
+    background-color: var(--principal);
+    color: var(--branco);
+
+    font-size: 18px;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.projeto-btn:hover {
+    background-color: var(--azul);
+    border-color: var(--azul);
+    transform: scale(1.08);
+}
+
+.projeto-btn:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 3px;
+}
+
+
+/* ==============================
+   CARROSSEL ATIVO
+============================== */
+
+.projetos-carrossel.carrossel-ativo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.carrossel-ativo .projetos-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.carrossel-ativo .projetos-grid {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.carrossel-ativo .projetos-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.carrossel-ativo .projeto-card {
+    flex: 0 0 calc((100% - 72px) / 4);
+}
+
+.carrossel-ativo .projeto-btn:not([hidden]) {
+    display: flex;
+}
+
+
+/* ==============================
+   TABLETS
+============================== */
+
+@media (max-width: 900px) {
+
+    .projetos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .carrossel-ativo .projeto-card {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+
+/* ==============================
+   TELEMÓVEIS
+============================== */
+
+@media (max-width: 600px) {
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-card {
+        padding: 1rem;
+    }
+
+    .projeto-card img {
+        height: 160px;
+    }
+
+    .projetos-carrossel.carrossel-ativo {
+        gap: 8px;
+    }
+
+    .carrossel-ativo .projeto-card {
+        flex-basis: 100%;
+    }
+
+    .projeto-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+}
+
+
+/* ==============================
+   ACESSIBILIDADE
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .projeto-card,
+    .projeto-btn,
+    .projeto-card a {
+        transition: none;
+    }
+
+    .carrossel-ativo .projetos-grid {
+        scroll-behavior: auto;
+    }
+}
+
+/* Apresentação e interação atualizadas da secção de projetos */
+.projetos-header { max-width: 680px; margin-bottom: 1.25rem; }
+.projetos-kicker { margin-bottom: .45rem; color: var(--destaque); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.projetos-header h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.04em; }
+.projetos-intro { max-width: 600px; margin-top: .75rem; color: var(--texto-fraco); }
+.carrossel-ativo.projetos-carrossel { display: flex; align-items: center; gap: 1rem; }
+.carrossel-ativo .projetos-container { flex: 1; overflow: hidden; }
+.carrossel-ativo .projetos-grid { display: flex; gap: 1.25rem; overflow-x: auto; padding: 14px 5px 22px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.carrossel-ativo .projetos-grid::-webkit-scrollbar { display: none; }
+.carrossel-ativo .projeto-card { flex: 0 0 calc((100% - 2.5rem) / 3); scroll-snap-align: start; padding: 1rem; border-color: #ffffff1c; border-radius: 14px; background: linear-gradient(155deg, #1b2637, #121a29 72%); }
+.carrossel-ativo .projeto-card:hover { transform: translateY(-5px); border-color: var(--destaque); box-shadow: 0 18px 36px #0005; }
+.carrossel-ativo .projeto-card > a:first-child { display: block; overflow: hidden; border-radius: 9px; background: #0b1220; }
+.carrossel-ativo .projeto-card img { height: 190px; margin: 0; object-fit: cover; transition: transform .45s ease; }
+.carrossel-ativo .projeto-card:hover img { transform: scale(1.04); }
+.carrossel-ativo .projeto-card h3 { margin: 1rem 0 .5rem; }
+.carrossel-ativo .projeto-card > a:last-child { align-self: flex-start; margin-top: auto; font-weight: 700; }
+.carrossel-ativo .projeto-btn:not([hidden]) { display: flex; border-color: #ffffff26; background: #1c2738; }
+.carrossel-ativo .projeto-btn:hover { background: var(--destaque); border-color: var(--destaque); color: #10131b; }
+@media (max-width: 900px) { .carrossel-ativo .projeto-card { flex-basis: calc((100% - 1.25rem) / 2); } }
+@media (max-width: 600px) { .carrossel-ativo.projetos-carrossel { gap: .5rem; } .carrossel-ativo .projeto-card { flex-basis: 88%; } .carrossel-ativo .projeto-card img { height: 200px; } }
+
+/* Identidade visual: azul quase preto, planos em gradiente e dourado suave */
+body { background: radial-gradient(ellipse at 14% 0%, #142640 0, transparent 36%), linear-gradient(145deg, #070d18, #0b1424 58%, #080e19); }
+.topo { position: sticky; top: 0; z-index: 20; background: #080f1de8; backdrop-filter: blur(16px); border-bottom-color: #d9e8ff1a; }
+.menu { max-width: 1440px; margin: 0 auto; background: transparent; border: 0; }
+.menu a:hover, #contactos a:hover { color: var(--destaque); }
+.links a { padding: .55rem .15rem; }
+.links a:hover { color: var(--destaque); }
+.hero { position: relative; overflow: hidden; max-width: 100%; min-height: 500px; padding: clamp(2.5rem, 6vw, 5.5rem) max(2rem, calc((100vw - 1240px) / 2)); background: linear-gradient(112deg, #0b1424 0%, #101f34 58%, #0a1220 100%); }
+.hero::after { content: ""; position: absolute; inset: 0 0 0 42%; pointer-events: none; opacity: .35; background: radial-gradient(circle at 70% 38%, #24476b 0, transparent 45%), linear-gradient(135deg, transparent 65%, #e7b85d22 65.2%, transparent 65.5%); }
+.hero-image, .hero-text { position: relative; z-index: 1; }
+.hero-image { border: 1px solid #e7b85d66; border-radius: 24px 24px 70px 24px; box-shadow: 0 25px 70px #0006; }
+.hero-text h1 { font-size: clamp(2.7rem, 5vw, 4.6rem); letter-spacing: -.055em; white-space: normal; }
+.hero-text p { color: #d8b96f; font-size: clamp(1.1rem, 2vw, 1.35rem); }
+main > section { max-width: 1240px; margin: 0 auto; padding: clamp(2.75rem, 6vw, 5rem) 2rem; scroll-margin-top: 90px; }
+main > hr { width: min(1240px, calc(100% - 4rem)); margin: 0 auto; border: 0; border-top: 1px solid #dceaff18; }
+main > section h2 { margin-bottom: 1.25rem; font-size: clamp(1.9rem, 3vw, 2.6rem); letter-spacing: -.04em; }
+main > section article, .conteudo-card { border-color: #ffffff17; border-radius: 14px; background: linear-gradient(145deg, #111e30, #0d1727); }
+.conteudo-card { padding: 1.5rem; }
+.acoes-sobre { justify-content: flex-start; gap: .8rem; margin: 1.25rem 0 0; padding: 0; list-style: none; }
+.acoes-sobre a { display: inline-flex; align-items: center; gap: .65rem; padding: .65rem .9rem; border: 1px solid #e7b85d55; border-radius: 10px; color: var(--texto); text-decoration: none; background: #0d1727; }
+.acoes-sobre a:hover { border-color: var(--destaque); background: #16243a; }
+.acoes-sobre img { width: 21px; height: 21px; object-fit: contain; }
+.projetos-header { max-width: 760px; }
+.projetos-kicker { color: var(--destaque); }
+.carrossel-ativo .projetos-grid { scroll-snap-type: none; }
+.carrossel-ativo .projeto-card { background: linear-gradient(145deg, #132238, #0d1727); }
+.carrossel-ativo .projeto-card h3 a { color: #f5f7fb; }
+.carrossel-ativo .projeto-btn:not([hidden]) { color: #f4f6fa; }
+#contactos .conteudo-card { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .8rem 2rem; padding: clamp(1.5rem, 4vw, 2.5rem); }
+#contactos .conteudo-card p:first-child { grid-column: 1 / -1; color: var(--texto-fraco); }
+#contactos .conteudo-card p:last-child { grid-column: 1 / -1; color: var(--texto-fraco); font-size: .9rem; }
+#contactos .conteudo-card p:nth-child(2) a { display: inline-flex; padding: .8rem 1rem; border: 1px solid #e7b85d66; border-radius: 10px; color: var(--destaque); }
+#contactos .contacto-cta { display: inline-flex; align-items: center; justify-content: center; padding: .8rem 1.15rem; border-radius: 10px; background: var(--destaque); color: #111827 !important; font-weight: 700; }
+#contactos .contacto-cta:hover { background: #f1cf82; color: #111827 !important; }
+.botao-topo { border-radius: 50%; box-shadow: 0 8px 28px #0007; }
+footer { background: #080f1d; }
+@media (max-width: 768px) { .hero { padding: 2rem 1rem; } .hero::after { inset: 0; } .menu { justify-content: center; } .links { justify-content: center; } .acoes-sobre { flex-wrap: wrap; } #contactos .conteudo-card { grid-template-columns: 1fr; } }
+
+/* ==============================
+   10. CONTACTOS
+============================== */
+
+#contactos a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+#contactos a:hover {
+    color: var(--destaque);
+}
+
+
+/* Botão voltar ao topo */
+
+.botao-topo {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+
+    padding: 0.7rem 1rem;
+
+    background-color: var(--destaque);
+    color: var(--principal);
+
+    border-radius: var(--raio);
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.botao-topo:hover {
+    opacity: 0.9;
+}
+
+
+/* ==============================
+   11. RODAPÉ
+============================== */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0.8rem 1rem;
+
+    background-color: var(--fundo);
+    color: var(--texto-fraco);
+
+    border-top: 1px solid var(--linha);
+
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--destaque);
+}
+
+
+/* ==============================
+   12. RESPONSIVIDADE
+============================== */
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    .projeto-card {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+}
+
+
+/* Telemóveis */
+
+@media (max-width: 768px) {
+
+    .menu {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .acoes {
+        margin-left: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .hero-image,
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text {
+        padding: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    #competencias {
+        flex-direction: column;
+    }
+
+    .competencia-card {
+        width: 100%;
+    }
+}
+
+
+/* Ecrãs pequenos */
+
+@media (max-width: 600px) {
+
+    .projeto-card {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+
+    .projetos-carrossel {
+        gap: 8px;
+    }
+
+    .projeto-btn {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+/* ==============================
+   INTERAÇÃO DO CARROSSEL
+============================== */
+
+/* Movimento suave */
+.projetos-grid {
+    scroll-snap-type: x proximity;
+    padding: 12px 4px;
+}
+
+/* Transição dos cartões */
+.projeto-card {
+    transform: scale(1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Destaque ao passar o rato */
+.projeto-card:hover {
+    transform: scale(1.025);
+    border-color: var(--azul);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+/* Destaque dos links */
+.projeto-card a {
+    transition: color 0.3s ease;
+}
+
+/* Botões */
+.projeto-btn:hover {
+    transform: scale(1.08);
+}
+
+/* Botão desativado */
+.projeto-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+    transform: none;
+}
+
+/* Respeitar utilizadores que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    .projeto-card,
+    .projeto-btn {
+        transition: none;
+    }
+}
+
+
+/* Estilos específicos da página abaixo. */
+
+
 /* =====================================
    MINI CNC - ESTILOS DA PÁGINA
 ===================================== */
@@ -289,9 +1066,7 @@ header .menu a {
    EIXOS
 ===================================== */
 
-.cnc-axis-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+1repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
 }
 
@@ -726,3 +1501,10 @@ header .menu a {
     }
 
 }
+
+.cnc-hero-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:0}.cnc-hero-gallery .cnc-hero-image{min-width:0;margin:0}.cnc-hero-gallery .cnc-hero-image img{width:100%;aspect-ratio:4/3;object-fit:cover}.cnc-hero-gallery .cnc-image-caption{padding:8px 5px;font-size:.72rem}
+@media(max-width:600px){.cnc-hero-gallery{grid-template-columns:1fr}}
+
+.floating-page-link{position:fixed;right:22px;bottom:20px;z-index:1000;display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid #e8bc6377;border-radius:999px;background:#0a1724ee;color:#f0c66e;text-decoration:none;font-weight:700;box-shadow:0 8px 24px #0007;transition:transform .2s,background .2s}
+.floating-page-link:hover{transform:translateY(-3px);background:#14283a;color:#ffdb8b}
+@media(max-width:700px){.floating-page-link{right:13px;bottom:14px;padding:10px 13px;font-size:13px}}

@@ -15,12 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS geral e CSS específico -->
-    <link rel="stylesheet" href="css/portfolio.css">
+    <!-- Folha de estilos específica desta página -->
     <link rel="stylesheet" href="css/mini-cnc.css">
 
     <!-- Ícones Lucide -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="js/mini-cnc.js" defer></script>
 </head>
 
 <body>
@@ -31,13 +31,13 @@
             <a href="index.html" class="logo">ROZIEL PIMENTA</a>
 
             <ul class="links">
-                <li><a href="index.html#inicio">Início</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#competencias">Competências</a></li>
-                <li><a href="index.html#projetos">Projetos</a></li>
-                <li><a href="index.html#experiencia">Experiência</a></li>
-                <li><a href="index.html#formacao">Formação</a></li>
-                <li><a href="index.html#contactos">Contacto</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="portfolio.html#sobre">Sobre</a></li>
+                <li><a href="portfolio.html#competencias">Competências</a></li>
+                <li><a href="portfolio.html#projetos">Projetos</a></li>
+                <li><a href="portfolio.html#experiencia">Experiência</a></li>
+                <li><a href="portfolio.html#sobre">Formação</a></li>
+                <li><a href="portfolio.html#contactos">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -69,21 +69,22 @@
                 </p>
 
                 <div class="cnc-hero-tags">
-                    <span><i data-lucide="cpu"></i> Arduino</span>
-                    <span><i data-lucide="recycle"></i> Reutilização</span>
-                    <span><i data-lucide="settings"></i> Automação</span>
+                    <span><i aria-hidden="true" data-lucide="cpu"></i> Arduino</span>
+                    <span><i aria-hidden="true" data-lucide="recycle"></i> Reutilização</span>
+                    <span><i aria-hidden="true" data-lucide="settings"></i> Automação</span>
                 </div>
 
             </div>
 
-            <div class="cnc-hero-image">
-                <img
-                    src="img/mini-cnc/mini-cnc-principal.jpg"
-                    alt="Imagem ilustrativa de uma mini CNC artesanal construída com mecanismos de leitores de CD e DVD"
-                >
-                <span class="cnc-image-caption">
-                    Representação ilustrativa da estrutura da Mini CNC
-                </span>
+            <div class="cnc-hero-gallery" aria-label="Representações conceptuais da Mini CNC">
+                <figure class="cnc-hero-image">
+                    <img src="img/mini-cnc/mini-cnc-principal.jpg" alt="Vista conceptual principal da Mini CNC construída com mecanismos reutilizados de leitores CD/DVD e uma unidade de disquetes">
+                    <figcaption class="cnc-image-caption">Representação principal</figcaption>
+                </figure>
+                <figure class="cnc-hero-image">
+                    <img src="img/mini-cnc/mini-cnc-vista-alternativa.jpg" alt="Vista conceptual alternativa da Mini CNC com mecanismos CD/DVD para X e Y e unidade de disquetes vertical para Z">
+                    <figcaption class="cnc-image-caption">Outra representação da montagem</figcaption>
+                </figure>
             </div>
 
         </section>
@@ -93,7 +94,7 @@
         <section class="cnc-award">
 
             <div class="cnc-award-icon">
-                <i data-lucide="trophy"></i>
+                <i aria-hidden="true" data-lucide="trophy"></i>
             </div>
 
             <div>
@@ -134,7 +135,7 @@
                 </div>
 
                 <div class="cnc-info-card">
-                    <i data-lucide="lightbulb"></i>
+                    <i aria-hidden="true" data-lucide="lightbulb"></i>
                     <h3>Uma solução económica</h3>
                     <p>
                         A escolha dos mecanismos de CD/DVD teve como
@@ -163,53 +164,24 @@
             </div>
 
             <div class="cnc-axis-grid">
-
                 <article class="cnc-axis-card">
-                    <div class="cnc-axis-number">X</div>
-                    <img
-                        src="img/mini-cnc/eixo-x.jpg"
-                        alt="Mecanismo de leitor de CD/DVD utilizado no eixo X"
-                    >
-                    <h3>Eixo X</h3>
-                    <p>
-                        Mecanismo de leitor de CD/DVD com motor
-                        de passo, responsável pelo movimento
-                        horizontal.
-                    </p>
+                    <div class="cnc-axis-number">X/Y</div>
+                    <img src="img/mini-cnc/eixo-cd-dvd.jpg" alt="Ilustração conceptual: leitor CD/DVD completo à esquerda e mecanismo interno aproveitado para os eixos X e Y à direita">
+                    <h3>Eixos X e Y</h3>
+                    <p>Dois mecanismos reutilizados de leitores CD/DVD, unidos para formar os movimentos horizontais da Mini CNC.</p>
                 </article>
-
-                <article class="cnc-axis-card">
-                    <div class="cnc-axis-number">Y</div>
-                    <img
-                        src="img/mini-cnc/eixo-y.jpg"
-                        alt="Mecanismo de leitor de CD/DVD utilizado no eixo Y"
-                    >
-                    <h3>Eixo Y</h3>
-                    <p>
-                        Outro mecanismo de leitor de CD/DVD,
-                        responsável pelo segundo movimento
-                        horizontal.
-                    </p>
-                </article>
-
                 <article class="cnc-axis-card">
                     <div class="cnc-axis-number">Z</div>
-                    <img
-                        src="img/mini-cnc/eixo-z.jpg"
-                        alt="Mecanismo de unidade de disquetes adaptado para o eixo Z"
-                    >
+                    <img src="img/mini-cnc/eixo-z-disquete.jpg" alt="Ilustração conceptual: unidade de disquetes completa à esquerda e mecanismo interno aproveitado para o eixo Z à direita">
                     <h3>Eixo Z</h3>
-                    <p>
-                        Mecanismo de uma unidade de disquetes,
-                        adaptado para controlar a posição da
-                        caneta.
-                    </p>
+                    <p>Mecanismo de uma unidade de disquetes reutilizado para controlar o movimento vertical da caneta.</p>
                 </article>
-
             </div>
 
+            <p class="cnc-small-note">Representações conceptuais aproximadas, baseadas na descrição do autor. Não são fotografias nem reproduções exatas da máquina original.</p>
+
             <div class="cnc-note">
-                <i data-lucide="info"></i>
+                <i aria-hidden="true" data-lucide="info"></i>
                 <p>
                     A caneta era a ferramenta utilizada na versão
                     original. A possibilidade de adaptação para
@@ -234,8 +206,8 @@
 
                 <div class="cnc-electronics-image">
                     <img
-                        src="img/mini-cnc/arduino-eletronica.jpg"
-                        alt="Imagem ilustrativa de uma placa Arduino e componentes eletrónicos"
+                        src="img/mini-cnc/arduino-ligacoes.jpg"
+                        alt="Ilustração conceptual do portátil ligado por USB ao Arduino, a um controlador genérico e aos mecanismos CD/DVD e de disquetes"
                     >
                 </div>
 
@@ -261,10 +233,7 @@
                         <span>USB</span>
                     </div>
 
-                    <p class="cnc-small-note">
-                        O modelo do circuito controlador dos motores
-                        ainda está por confirmar.
-                    </p>
+                    <p class="cnc-small-note">Ligação conceptual: portátil → Arduino → controlador dos motores → mecanismos. O modelo do circuito controlador usado na máquina original ainda está por confirmar.</p>
 
                 </div>
 
@@ -284,7 +253,7 @@
             <div class="cnc-power-card">
 
                 <div class="cnc-power-icon">
-                    <i data-lucide="zap"></i>
+                    <i aria-hidden="true" data-lucide="zap"></i>
                 </div>
 
                 <div>
@@ -321,7 +290,7 @@
 
                 <article>
                     <span>01</span>
-                    <i data-lucide="image"></i>
+                    <i aria-hidden="true" data-lucide="image"></i>
                     <h3>Preparação</h3>
                     <p>
                         Preparação do desenho no computador para
@@ -331,7 +300,7 @@
 
                 <article>
                     <span>02</span>
-                    <i data-lucide="code"></i>
+                    <i aria-hidden="true" data-lucide="code"></i>
                     <h3>Instruções</h3>
                     <p>
                         Configuração do sistema e preparação das
@@ -341,7 +310,7 @@
 
                 <article>
                     <span>03</span>
-                    <i data-lucide="usb"></i>
+                    <i aria-hidden="true" data-lucide="usb"></i>
                     <h3>Comunicação</h3>
                     <p>
                         Ligação do Arduino ao portátil através
@@ -351,7 +320,7 @@
 
                 <article>
                     <span>04</span>
-                    <i data-lucide="pen-tool"></i>
+                    <i aria-hidden="true" data-lucide="pen-tool"></i>
                     <h3>Execução</h3>
                     <p>
                         Movimentação dos eixos e reprodução do
@@ -362,7 +331,7 @@
             </div>
 
             <div class="cnc-note">
-                <i data-lucide="info"></i>
+                <i aria-hidden="true" data-lucide="info"></i>
                 <p>
                     A utilização de G-code e do software específico
                     de controlo ainda está a ser confirmada através
@@ -419,12 +388,12 @@
 
             <div class="cnc-skills">
 
-                <span><i data-lucide="wrench"></i> Montagem mecânica</span>
-                <span><i data-lucide="circuit-board"></i> Eletrónica</span>
-                <span><i data-lucide="code"></i> Programação</span>
-                <span><i data-lucide="ruler"></i> Calibração</span>
-                <span><i data-lucide="recycle"></i> Reutilização</span>
-                <span><i data-lucide="brain"></i> Resolução de problemas</span>
+                <span><i aria-hidden="true" data-lucide="wrench"></i> Montagem mecânica</span>
+                <span><i aria-hidden="true" data-lucide="circuit-board"></i> Eletrónica</span>
+                <span><i aria-hidden="true" data-lucide="code"></i> Programação</span>
+                <span><i aria-hidden="true" data-lucide="ruler"></i> Calibração</span>
+                <span><i aria-hidden="true" data-lucide="recycle"></i> Reutilização</span>
+                <span><i aria-hidden="true" data-lucide="brain"></i> Resolução de problemas</span>
 
             </div>
 
@@ -458,7 +427,7 @@
                         rel="noopener noreferrer"
                     >
                         Consultar instituição
-                        <i data-lucide="external-link"></i>
+                        <i aria-hidden="true" data-lucide="external-link"></i>
                     </a>
                 </div>
 
@@ -490,7 +459,7 @@
             </p>
 
             <div class="cnc-future-tag">
-                <i data-lucide="construction"></i>
+                <i aria-hidden="true" data-lucide="construction"></i>
                 Projeto de reconstrução em planeamento
             </div>
 
@@ -499,8 +468,8 @@
 
         <!-- VOLTAR -->
         <div class="cnc-back">
-            <a href="index.html#projetos">
-                <i data-lucide="arrow-left"></i>
+            <a href="portfolio.html#projetos">
+                <i aria-hidden="true" data-lucide="arrow-left"></i>
                 Voltar aos projetos
             </a>
         </div>
@@ -508,17 +477,12 @@
     </main>
 
 
+    <a class="floating-page-link" href="portfolio.html#projetos" aria-label="Voltar aos projetos do portfólio">← <span>Projetos</span></a>
     <!-- RODAPÉ -->
     <footer>
         <p>© 2026 Roziel Pimenta. Todos os direitos reservados.</p>
         <a href="index.html">Portefólio</a>
     </footer>
-
-
-    <!-- Inicialização dos ícones -->
-    <script>
-        lucide.createIcons();
-    </script>
 
 </body>
 </html>

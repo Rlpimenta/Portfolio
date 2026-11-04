@@ -1,47 +1,20 @@
+CRÉDITOS E RECONHECIMENTOS
 
-
-CRÉDITOS
-
-Autor:
-Roziel Lima Pimenta
-
+Autor: Roziel Lima Pimenta
 Projeto desenvolvido no âmbito da formação de Web Design — IEFP.
 
-Tecnologias utilizadas:
-HTML5
-CSS3
-JavaScript
+APOIO AO DESENVOLVIMENTO
+ChatGPT (OpenAI) foi utilizado como apoio à análise, revisão semântica e de acessibilidade, organização da documentação e implementação de ajustes em HTML, CSS e JavaScript. As decisões, conteúdos e validação final são da responsabilidade do autor.
 
-Fontes:
-Google Fonts — Inter e Montserrat.
+IMAGENS
+- img/index-fundo-eletrotecnica.png: imagem conceptual gerada com ChatGPT a partir de referências visuais fornecidas pelo autor.
+- img/mini-cnc/: ilustrações conceptuais geradas com ChatGPT a partir da descrição do autor. Incluem a representação principal e alternativa da Mini CNC, os mecanismos CD/DVD dos eixos X/Y, a unidade de disquetes do eixo Z e uma proposta de ligações entre portátil, Arduino, controlador e mecanismos. São aproximações visuais, não fotografias da máquina original; o modelo do controlador ainda não está confirmado.
+- img/roziel-recorte.png, img/eu.png e img/eu iot.png: imagens de apresentação fornecidas ou aprovadas pelo autor.
+- img/doce-ribeira.png, img/plano-treino.jpg e img/technovadb.png: pré-visualizações dos projetos do autor.
 
-Imagens:
-Fotografia pessoal de Roziel Lima Pimenta.
-Imagens utilizadas no projeto para fins educativos.
+FONTES E ÍCONES EXTERNOS
+- Google Fonts: DM Sans, Space Grotesk, Inter e Montserrat — https://fonts.google.com/
+- Lucide Icons — https://lucide.dev/ (carregado via unpkg.com).
 
-Finalidade:
-Projeto desenvolvido para fins educativos e de apresentação profissional.
-
------------------
-
-IMAGENS EXTERNAS
-
-Imagem utilizada no projeto Mini CNC:
-Autor: Snapmaker 3D Printer
-Perfil: https://unsplash.com/pt-br/@snapmaker_official
-Origem: Unsplash
-Data de acesso: 11/09/2026
-Licença: Unsplash License
-
-------------------------
-
-Imagens:
-Fotografia pessoal de Roziel Lima Pimenta.
-
-Imagem Mini CNC:
-Imagem gerada por inteligência artificial (ChatGPT),
-a partir de fotografia de referência fornecida pelo autor,
-para utilização no portfólio pessoal e fins educativos.
-
-Finalidade:
-Projeto desenvolvido para fins educativos e de apresentação profissional.
+FINALIDADE
+Projeto estático para fins educativos e de apresentação profissional.

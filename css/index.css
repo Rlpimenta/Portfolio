@@ -28,11 +28,6 @@
 
 @media(prefers-reduced-motion:reduce){.opening-notice{animation:notice-life-static 3s steps(1,end) forwards!important}}@keyframes notice-life-static{0%,99.9%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
 
-.landing-floating-link { color:#f0c66e; }
-@media(max-width:700px) { .landing-floating-link { bottom:72px; } }
-.landing-floating-link{position:fixed;right:22px;bottom:72px;z-index:15;display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid #e8bc6377;border-radius:999px;background:#0a1724ee;color:#f0c66e;text-decoration:none;font-weight:700;box-shadow:0 8px 24px #0007;transition:transform .2s,background .2s}
-.landing-floating-link:hover{transform:translateY(-3px);background:#14283a;color:#ffdb8b}
-@media(max-width:700px){.landing-floating-link{right:13px;bottom:70px;padding:10px 13px;font-size:13px}}
 
 /* Os cartões mostram primeiro o ícone e o título; a frase aparece na interação. */
 .quick-card { min-height: 158px; gap: 7px; }

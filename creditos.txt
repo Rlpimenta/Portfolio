@@ -18,3 +18,9 @@ FONTES E ÍCONES EXTERNOS
 
 FINALIDADE
 Projeto estático para fins educativos e de apresentação profissional.
+LOGÓTIPOS DE EMPREGADORES
+Os logótipos aparecem apenas para identificar as experiências profissionais; as marcas pertencem às respetivas empresas.
+- ExpressGlass: https://www.expressglass.pt/wp-content/uploads/2021/08/apple-touch-icon.png
+- EDP: https://commons.wikimedia.org/wiki/File:EDP_2022.svg (identidade EDP de 2022; consultar também https://brand.edp.com/edp/brand-guidelines/logos)
+- MEO: https://commons.wikimedia.org/wiki/File:Meo_logo.svg (versão usada durante o período indicado no currículo)
+- DPD: https://www.dpd.com/wp-content/themes/DPD_NoLogin/images/DPD_logo_redgrad_rgb_responsive.svg

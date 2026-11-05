@@ -94,3 +94,21 @@ function configurarTransicoes() {
 
 configurarCarrossel();
 configurarTransicoes();
+
+function configurarExperiencias() {
+    document.querySelectorAll(".experience-toggle").forEach((botao) => {
+        botao.addEventListener("click", () => {
+            const resumo = document.getElementById(botao.getAttribute("aria-controls"));
+            const cartao = botao.closest(".timeline article");
+            if (!resumo || !cartao) return;
+
+            const expandido = botao.getAttribute("aria-expanded") === "true";
+            botao.setAttribute("aria-expanded", String(!expandido));
+            resumo.hidden = expandido;
+            cartao.classList.toggle("is-expanded", !expandido);
+            botao.querySelector("span").textContent = expandido ? "Ver resumo" : "Fechar resumo";
+        });
+    });
+}
+
+configurarExperiencias();

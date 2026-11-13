@@ -101,3 +101,6 @@ footer{background:#031117}
 .language-level-track span { display:block; width:75%; height:100%; border-radius:inherit; background:linear-gradient(90deg,#f0c15e,#0bbdce); }
 @media(max-width:720px) { .language-progress { max-width:420px; } }
 
+
+.complementary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.complementary-card{padding:18px 20px;border:1px solid #0bbdce55;border-radius:12px;background:linear-gradient(145deg,#0a2931,#061a22)}.complementary-card summary{color:#f0c66e;font:600 16px var(--title);cursor:pointer}.complementary-card p,.complementary-card li{color:#d1d8e2;font-size:13px;line-height:1.65}.complementary-card ul{padding-left:20px}.operational-skills{margin-top:24px}.operational-skills h3{font:600 20px var(--title)}
+@media(max-width:720px){.complementary-grid{grid-template-columns:1fr}.complementary-card{padding:16px}}

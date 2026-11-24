@@ -1508,3 +1508,11 @@ header .menu a {
 .floating-page-link{position:fixed;right:22px;bottom:20px;z-index:1000;display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid #e8bc6377;border-radius:999px;background:#0a1724ee;color:#f0c66e;text-decoration:none;font-weight:700;box-shadow:0 8px 24px #0007;transition:transform .2s,background .2s}
 .floating-page-link:hover{transform:translateY(-3px);background:#14283a;color:#ffdb8b}
 @media(max-width:700px){.floating-page-link{right:13px;bottom:14px;padding:10px 13px;font-size:13px}}
+
+/* Detalhes expansíveis da formação técnica */
+.cnc-training-details{margin:14px 0 4px;padding:13px 15px;border:1px solid var(--linha);border-radius:12px;background:rgba(255,255,255,.025)}
+.cnc-training-details summary{cursor:pointer;color:var(--destaque);font-weight:700}
+.cnc-training-details ul{margin:12px 0;padding-left:20px;columns:2;gap:24px}
+.cnc-training-details li{margin:4px 0;color:var(--texto-fraco)}
+.cnc-training-details p{margin:10px 0 0}
+@media(max-width:560px){.cnc-training-details ul{columns:1}}
